@@ -1,17 +1,26 @@
 \documentclass{article}
 \usepackage[paper=a4paper,left=20mm,right=20mm,top=25mm,bottom=25mm]{geometry}
-\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+\setmainfont{Doulos SIL}
+%\usepackage[utf8]{inputenc}
 \usepackage{tikz}
 
 
 \definecolor{wood}{RGB}{255, 231, 171}
 %tile size: 15mmx15mm
 \begin{document}
-\tikzstyle{tile}= [rectangle, draw=black!50, fill=wood, thick, minimum size=15mm]
+\tikzstyle{tile}= [rectangle, draw=black!50, fill=wood,ultra thick, minimum size=15mm]
 \begin{tikzpicture}
-
   \matrix[nodes={draw},
-    row sep=0.3cm,column sep=0.3cm] {
+    row sep=0.0cm,column sep=0.0cm] {
+    \input{tilematrix}
+  };
+\end{tikzpicture}    
+\clearpage
+\tikzstyle{tile}= [rectangle, draw=black!50, ultra thick, minimum size=15mm]
+\begin{tikzpicture}
+  \matrix[nodes={draw},
+    row sep=0.0cm,column sep=0.0cm] {
     \input{tilematrix}
   };
 \end{tikzpicture}    
